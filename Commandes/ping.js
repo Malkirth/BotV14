@@ -6,14 +6,13 @@ module.exports = new Command({
     name: "ping",
     description: "Permet de connaitre le ping du bot",
     utilisation: "",
-    permission: "" ,
+    permission: "",
     category: "Information",
 	cooldown: 5,
 
     async run(bot, message, args, db){
 
         const startTimeDB = Date.now()
-
 
         const endTimeDB = Date.now()
 

@@ -5,7 +5,7 @@ const Discord = require("discord.js");
 
 module.exports = new Event("interactionCreate", async (bot, interaction) => {
 
-    if (interaction.type === InteractionType.ApplicationCommand) {
+    if (interaction.type === Discord.InteractionType.ApplicationCommand) {
 
         const command = bot.commands.get(interaction.commandName)
 
@@ -36,7 +36,7 @@ module.exports = new Event("interactionCreate", async (bot, interaction) => {
 
         // Permissions
 
-        if(command.permission !== "Aucune" && command.permission !== "Développeur" && !interaction.member.permissions.has(new Discord.Permissions(command.permission))) return interaction.reply("Vous n'avez pas la permission requise pour exécuter cette commande !")
+        if(command.permission !== "Aucune" && command.permission !== "Développeur" && !interaction.member.permissions.has(new Discord.PermissionsBitField(command.permission))) return interaction.reply("Vous n'avez pas la permission requise pour exécuter cette commande !")
 
         // Execution de l'interaction
 

@@ -173,7 +173,13 @@ module.exports = async(bot) => {
         // reputationsys
         new SlashCommandBuilder()
         .setName("reputationsys")
-        .setDescription('Permet d\'activer ou de désactiver le système de réputation sur le serveur')
+        .setDescription('Permet d\'activer ou de désactiver le système de réputation sur le serveur'),
+        
+        // reputationsys
+        new SlashCommandBuilder()
+        .setName("test")
+        .setDescription('Permet de tester la commande de test')
+
     ]
 
     const rest = new REST({ version: '10' }).setToken(token);

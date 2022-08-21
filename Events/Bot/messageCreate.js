@@ -3,10 +3,11 @@ const Event = require("../../Structure/Event")
 
 module.exports = new Event("messageCreate", async (bot, message) => {
     
+
     if(message.author.bot) return;
 
     const db = bot.db;
-    
+
     let prefix = "!"
 
     let messageArray = message.content.split(" ");
@@ -45,7 +46,7 @@ module.exports = new Event("messageCreate", async (bot, message) => {
 
     // Permissions
 
-    if (!message.member.permissions.has(new Discord.Permissions(commandFile.permission))) return message.reply("Vous n'avez pas les permissions requises pour executer cette commande")
+    if (!message.member.permissions.has(new Discord.PermissionsBitField(commandFile.permission))) return message.reply("Vous n'avez pas les permissions requises pour executer cette commande")
 
     // Execution de la commande 
 

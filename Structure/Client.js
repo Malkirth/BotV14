@@ -1,7 +1,9 @@
 const Discord = require("discord.js");
 const mysql = require("mysql");
 const fs = require("fs");
-const intents = new Discord.Intents(32767);
+
+const intents = new Discord.IntentsBitField(3276799);
+
 const Command = require("./Command");
 const Database = require("./Database");
 const Event = require("./Event");

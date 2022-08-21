@@ -7,7 +7,7 @@ module.exports = new Command({
     description: "Description de la commande",
     utilisation: "méthode d'utilisation",
     // Permission admin dans l'exemple
-    permission: Discord.Permissions.FLAGS.ADMINISTRATOR,
+    permission: Discord.PermissionFlagsBits.ADMINISTRATOR,
     category: "Catégorie de la commande",
 	cooldown: 5, 
 
